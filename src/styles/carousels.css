@@ -1,0 +1,26 @@
+.carouselWrap{
+    overflow-x: scroll;
+}
+.carousel{
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 1rem;
+}
+.div-title-planet, .div-title-people{
+    margin-left: 6rem;
+    text-align: left;
+    color: red;
+    margin-bottom: 1rem;
+}
+.div-title-planet{
+    margin-top: 2rem;
+}
+.button-learn-more{
+    float: left;
+}
+.button-heart{
+    float: right;
+}
+.card-text, .card-title{
+    text-align: left;
+}
