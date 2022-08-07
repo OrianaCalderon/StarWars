@@ -7,9 +7,9 @@ import "../../styles/carousels.css"
 
 
 
-const CharacterDetails = ({ character }) => {
+const PeopleDetails = ({ character }) => {
     const params = useParams();
-    const { gender, name, eye_color,birth_year,height,skin_color} = character.properties;
+    const { name, climate, population, orbital_period, rotation_period, diameter} = character.properties;
     const { uid } = params;
 
     return (
@@ -41,24 +41,24 @@ const CharacterDetails = ({ character }) => {
                         {name}
                     </div>
                     <div className="col-2">
-                        <p>Birth Year</p>
-                        <p>{birth_year}</p>
+                        <p>Climate</p>
+                        <p>{climate}</p>
                     </div>
                     <div className="col-2">
-                        <p>Gender</p>
-                        {gender}
+                        <p>Population</p>
+                        {population}
                     </div>
                     <div className="col-2">
-                        <p>Height</p>
-                        {height}
+                        <p>Orbital Period</p>
+                        {orbital_period}
                     </div>
                     <div className="col-2">
-                        <p>Skin Color</p>
-                        {skin_color}
+                        <p>Rotation Period</p>
+                        {rotation_period}
                     </div>
                     <div className="col-2">
-                        <p>Color de ojos</p>
-                        {eye_color}
+                        <p>Diameter</p>
+                        {diameter}
                     </div>
                 </div>
             </div>
@@ -68,8 +68,8 @@ const CharacterDetails = ({ character }) => {
     )
 }
 
-CharacterDetails.propTypes = {
-    character: PropTypes.object,
+PeopleDetails.propTypes = {
+    planets: PropTypes.object,
 };
 
-export default CharacterDetails;
+export default PeopleDetails;

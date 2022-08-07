@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 
 //react router-dom
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+
 
 import "../../styles/carousels.css"
 

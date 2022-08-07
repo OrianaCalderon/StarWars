@@ -10,10 +10,8 @@ import { Link } from "react-router-dom";
 
 const CarouselCharacters = ({ character }) => {
 
-    console.log(character)
 
-
-    const { gender, hair_color, name, eye_color } = character.properties;
+    const { gender, hair_color, name, eye_color, uid } = character.properties;
 
 
 
@@ -27,7 +25,7 @@ const CarouselCharacters = ({ character }) => {
                     <p className="card-text my-0">{gender}</p>
                     <p className="card-text my-0">{hair_color}</p>
                     <p className="card-text">{eye_color}</p>
-                    <Link to={`/`} className="btn btn-outline-primary button-learn-more">
+                    <Link to={`/character/${uid}`} className="btn btn-outline-primary button-learn-more">
                         Learn more!
                     </Link>
                     <Link to={`/`} className="btn btn-outline-warning button-heart">

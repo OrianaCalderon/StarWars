@@ -5,9 +5,11 @@ import { Context } from "../store/appContext.js";
 //components
 import CarouselCharacters from "../component/CarouselCharacters.jsx";
 import CarouselPlanets from "../component/CarouselPlanets.jsx";
+import CharacterDetails from "../component/CharacterDetails.jsx";
 
 //css
 import "../../styles/carousels.css"
+
 
 const Home = () => {
 
@@ -45,6 +47,17 @@ const Home = () => {
 						}
 					</div>
 				</div>
+
+				{/* <div className="container">
+					{
+						store.people.map((character)=>{
+							return(
+								<CharacterDetails key={`character-${character._id}`} character={character} />
+							)
+						})
+					}
+				</div> */}
+
 
 
 
