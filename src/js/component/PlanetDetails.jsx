@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-
+//style-css
 import "../../styles/carousels.css"
 
 
 
 
-const PeopleDetails = ({ character }) => {
+const PlanetDetails = ({ character }) => {
     const params = useParams();
     const { name, climate, population, orbital_period, rotation_period, diameter} = character.properties;
     const { uid } = params;
@@ -68,8 +68,8 @@ const PeopleDetails = ({ character }) => {
     )
 }
 
-PeopleDetails.propTypes = {
+PlanetDetails.propTypes = {
     planets: PropTypes.object,
 };
 
-export default PeopleDetails;
+export default PlanetDetails;

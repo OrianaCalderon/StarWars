@@ -1,16 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
+import PropTypes, { element } from "prop-types";
+
+//react-router
+import { Context } from "../store/appContext.js"
+import {useParams} from "react-router"
 
 
+
+//style-css
 import "../../styles/carousels.css"
 
 
 
 
 const CharacterDetails = ({ character }) => {
-    const params = useParams();
+
+    
     const { gender, name, eye_color,birth_year,height,skin_color} = character.properties;
-    const { uid } = params;
+    
 
     return (
         <>

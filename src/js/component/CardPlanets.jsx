@@ -3,11 +3,11 @@ import React from "react";
 //react router-dom
 import { Link } from "react-router-dom";
 
-
+//style-css
 import "../../styles/carousels.css"
 
 
-const CarouselPlanets = ({ character }) => {
+const CardPlanets = ({ character }) => {
     const { population, terrain, name } = character.properties;
 
     return (
@@ -17,8 +17,8 @@ const CarouselPlanets = ({ character }) => {
                 <img src="https://picsum.photos/seed/picsum/20/20" className="card-img-top" alt="imagen" />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text my-0">{population}</p>
-                    <p className="card-text my-0">{terrain}</p>
+                    <p className="card-text my-0">Population: {population}</p>
+                    <p className="card-text my-0">Terrain: {terrain}</p>
 
                     <Link to={`/`} className="btn btn-outline-primary button-learn-more">
                         Learn more!
@@ -33,4 +33,4 @@ const CarouselPlanets = ({ character }) => {
     )
 }
 
-export default CarouselPlanets;
+export default CardPlanets;
