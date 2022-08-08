@@ -9,6 +9,7 @@ import "../../styles/carousels.css"
 
 const CardPlanets = ({ character }) => {
     const { population, terrain, name } = character.properties;
+    const {uid}=character
 
     return (
         <>

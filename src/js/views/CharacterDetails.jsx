@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect} from "react";
 import PropTypes, { element } from "prop-types";
 
 //react-router
@@ -13,10 +13,21 @@ import "../../styles/carousels.css"
 
 
 
-const CharacterDetails = ({ character }) => {
+const CharacterDetails = () => {
+    const params = useParams();
+    const {store,actions}= useContext(Context);
 
-    
-    const { gender, name, eye_color,birth_year,height,skin_color} = character.properties;
+    const [character, setCharacter]=useState({});
+
+    useEffect(()=>{
+        if(!store.people)return;
+        const getCharacter = store.people.find((character)=>{
+            return character.uid == params.id;
+        });
+        console.log(getCharacter)
+        setCharacter(getCharacter.properties)
+    },[store.people]);
+
     
 
     return (
@@ -28,44 +39,40 @@ const CharacterDetails = ({ character }) => {
                         <img src="https://picsum.photos/seed/picsum/20/20" className="card-img-top" alt="imagen" />
                     </div>
                     <div className="col-6">
-                        <p>{name}</p>
+                        <p>{character.properties.name}</p>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, molestiae dolor cumque 
                             similique recusandae provident exercitationem amet? Nisi beatae, odit, recusandae doloribus
                             nulla fuga soluta exercitationem non possimus consectetur in.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, molestiae dolor cumque 
-                            similique recusandae provident exercitationem amet? Nisi beatae, odit, recusandae doloribus
-                            nulla fuga soluta exercitationem non possimus consectetur in.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, molestiae dolor cumque 
-                            similique recusandae provident exercitationem amet? Nisi beatae, odit, recusandae doloribus
-                            nulla fuga soluta exercitationem non possimus consectetur in.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, molestiae dolor cumque. 
+                            
                         </p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-2">
                         <p>Name</p>
-                        {name}
+                        {character?.name}
                     </div>
                     <div className="col-2">
                         <p>Birth Year</p>
-                        <p>{birth_year}</p>
+                        <p>{character?.birth_year}</p>
                     </div>
                     <div className="col-2">
                         <p>Gender</p>
-                        {gender}
+                        {character?.gender}
                     </div>
                     <div className="col-2">
                         <p>Height</p>
-                        {height}
+                        {character?.height}
                     </div>
                     <div className="col-2">
                         <p>Skin Color</p>
-                        {skin_color}
+                        {character?.skin_color}
                     </div>
                     <div className="col-2">
                         <p>Color de ojos</p>
-                        {eye_color}
+                        {character?.eye_color}
                     </div>
                 </div>
             </div>

@@ -11,7 +11,8 @@ import { Link } from "react-router-dom";
 
 const CardCharacters = ({ character }) => {
 
-    const { gender, hair_color, name, eye_color, uid } = character.properties;
+    const { gender, hair_color, name, eye_color} = character.properties;
+    const { uid } = character;
 
     return (
         <>

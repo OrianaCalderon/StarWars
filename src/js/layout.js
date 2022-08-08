@@ -4,11 +4,12 @@ import ScrollToTop from "./component/scrollToTop";
 
 import Home from "./views/home.jsx";
 import injectContext from "./store/appContext";
+import CharacterDetails from "./views/CharacterDetails.jsx";
+import PlanetDetails from "./views/PlanetDetails.jsx";
 
 //components
 import { Navbar } from "./component/navbar";
-import CharacterDetails from "./component/CharacterDetails.jsx";
-import PlanetDetails from "./component/PlanetDetails.jsx";
+
 
 //create your first component
 const Layout = () => {

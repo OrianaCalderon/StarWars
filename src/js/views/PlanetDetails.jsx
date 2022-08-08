@@ -8,9 +8,9 @@ import "../../styles/carousels.css"
 
 
 const PlanetDetails = ({ character }) => {
-    const params = useParams();
+    // const params = useParams();
     const { name, climate, population, orbital_period, rotation_period, diameter} = character.properties;
-    const { uid } = params;
+    // const { uid } = params;
 
     return (
         <>

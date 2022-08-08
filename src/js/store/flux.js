@@ -3,8 +3,8 @@ import { element } from "prop-types";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			people:[],
-			planets:[],
+			people: JSON.parse(localStorage.getItem("people"))||[],
+			planets: JSON.parse(localStorage.getItem("planets"))||[],
 			urlBase:"https://www.swapi.tech/api/",
 			endPoint:["people","planets"],
 			

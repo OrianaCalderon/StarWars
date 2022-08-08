@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from "prop-types";
 
 //components
-import CardCharacters from './CardCharacters.jsx';
-import CardPlanets from './CardPlanets.jsx';
+import CardCharacters from "../component/CardCharacters.jsx";
+import CardPlanets from "../component/CardPlanets.jsx";
 
 const Carousel = ({ title, items}) => {
     return (
