@@ -61,6 +61,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 						favorito:newFavorite})
 				}
 			},
+			deleteFavoritoList: (favorito)=>{
+				const store = getStore()
+				let newListFavorito = store.favorito.filter((item, index)=>{
+					if(index != favorito){
+						return item
+					}
+				})
+				setStore({...store, 
+					favoriteChars: newListFavorito
+				})
+			},
 
 			
 

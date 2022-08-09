@@ -36,11 +36,11 @@ const PlanetDetails = () => {
                     <div className="col-6">
                         <img
                             src="https://picsum.photos/seed/picsum/100/100"
-                            className="card-img-top"
+                            className="card-img-top p-4"
                             alt="imagen"
                         />
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 div-title-planets">
                         <h1 className="title-name-characters">{character.properties?.name}</h1>
                         <p>
                             {character?.description}

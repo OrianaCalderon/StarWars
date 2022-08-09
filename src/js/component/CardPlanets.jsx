@@ -11,7 +11,7 @@ import "../../styles/carousels.css"
 
 const CardPlanets = ({ character }) => {
     const { store, actions } = useContext(Context);
-    const { population, terrain, name } = character.properties;
+    const { population, terrain, name, created } = character.properties;
     const {uid} = character
 
     return (
@@ -20,7 +20,7 @@ const CardPlanets = ({ character }) => {
             <div className="col-3 mx-3 card" >
                 <img src="https://picsum.photos/seed/picsum/20/20" className="card-img-top" alt="imagen" />
                 <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
+                    <h5 className="card-title"><p><b>{name}</b></p></h5>
                     <p className="card-text my-0">Population: {population}</p>
                     <p className="card-text my-0">Terrain: {terrain}</p>
 
@@ -29,7 +29,7 @@ const CardPlanets = ({ character }) => {
                     </Link>
                     <button type="button" 
                     className="btn btn-outline-warning button-heart"
-                    // onClick={() =>{actions.addFavoritos(created)}}
+                    onClick={() =>{actions.addFavoritos(created)}}
                     >
                         <i className="far fa-heart"></i>
                     </button>

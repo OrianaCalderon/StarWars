@@ -9,14 +9,14 @@ import Carousel from "../component/Carousel.jsx";
 
 
 //css
-import "../../styles/carousels.css"
+import "../../styles/home.css"
 
 
 const Home = () => {
 
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="text-center mt-5">
+		<div className="text-center mt-5 div-home">
 			<div className="row">
 				<Carousel  title={"Characters"} items={store.people}/>
 				<Carousel title={"Planets"} items={store.planets} />

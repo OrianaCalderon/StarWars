@@ -30,12 +30,12 @@ const CharacterDetails = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container div-people-details">
                 <div className="row">
                     <div className="col-6">
                         <img
                             src="https://picsum.photos/seed/picsum/100/100"
-                            className="card-img-top"
+                            className="card-img-top p-4"
                             alt="imagen"
                         />
                     </div>

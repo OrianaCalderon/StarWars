@@ -9,11 +9,15 @@
 .div-title-planet, .div-title-people{
     margin-left: 6rem;
     text-align: left;
-    color: red;
+    color:black ;
     margin-bottom: 1rem;
+    -webkit-text-stroke: 0.5px yellow ;
+}
+.div-title-people{
+    margin-top: 5rem;
 }
 .div-title-planet{
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 .button-learn-more{
     float: left;
@@ -34,5 +38,17 @@
     padding-top: 1rem;
 }
 .title-name-characters{
-    color:red;
+    -webkit-text-stroke: 0.3px yellow 
+}
+.div-people-details{
+    margin-top: 6rem;
+}
+.card{
+    background-color: white;
+    padding: 1rem;
+    border: transparent;
+}
+.div-title-planets{
+    margin-top: 6rem;
+
 }
