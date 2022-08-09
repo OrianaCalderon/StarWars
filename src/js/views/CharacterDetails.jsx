@@ -43,8 +43,10 @@ const CharacterDetails = () => {
                         />
                     </div>
                     <div className="col-6">
-                        <h1 className="title-name-characters">{character.properties?.name}</h1>
-                        <p>
+                        <h1 className="title-name-characters">
+                            {character.properties?.name}
+                        </h1>
+                        <p className="description-characters">
                             {character?.description}
                         </p>
                     </div>
@@ -55,7 +57,7 @@ const CharacterDetails = () => {
                         {character.properties?.name}
                     </div>
                     <div className="col-2">
-                    <p><b>Birth Year</b></p>
+                        <p><b>Birth Year</b></p>
                         <p>{character.properties?.birth_year}</p>
                     </div>
                     <div className="col-2">

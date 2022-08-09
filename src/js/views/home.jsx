@@ -18,9 +18,9 @@ const Home = () => {
 	return (
 		<div className="text-center mt-5 div-home">
 			<div className="row">
-				<Carousel  title={"Characters"} items={store.people}/>
+				<Carousel title={"Characters"} items={store.people} />
 				<Carousel title={"Planets"} items={store.planets} />
-	
+
 			</div>
 
 

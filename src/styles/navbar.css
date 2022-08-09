@@ -1,15 +1,16 @@
-.header-navbar{
-    position: fixed;
-    background: white;
+.header-navbar {
+  position: fixed;
+  background: white;
   width: 100%;
   z-index: 100;
-  top:0
-
+  top: 0
 }
-.div-empty{
+
+.div-empty {
   text-align: center;
 }
-.div-name-deleteButton{
+
+.div-name-deleteButton {
   justify-content: space-between;
   display: flex;
   padding-right: 0.5rem;

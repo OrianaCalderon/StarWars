@@ -1,35 +1,35 @@
-.carouselWrap{
+.carouselWrap {
     overflow-x: scroll;
 }
-.carousel{
+
+.carousel {
     padding-left: 6rem;
     padding-right: 6rem;
     padding-bottom: 1rem;
 }
-.div-title-planet, .div-title-people{
+
+.div-title-planet,
+.div-title-people {
     margin-left: 6rem;
     text-align: left;
-    color:black ;
+    color: black;
     margin-bottom: 1rem;
-    -webkit-text-stroke: 0.5px yellow ;
-}
-.div-title-people{
-    margin-top: 5rem;
-}
-.div-title-planet{
-    margin-top: 5rem;
-}
-/* .button-learn-more{
-    float: left;
-}
-.button-heart{
-    float: right;
-} */
-.card-text, .card-title{
-    text-align: left;
+    -webkit-text-stroke: 0.5px yellow;
 }
 
-.div-column-details{
+.div-title-people {
+    margin-top: 5rem;
+}
+
+.div-title-planets {
+    margin-top: 1rem;
+}
+
+.card-title, .card-text {
+    text-align: center;
+}
+
+.div-column-details {
     margin-top: 4rem;
     color: #5e2129;
     margin-bottom: 4rem;
@@ -37,26 +37,33 @@
     text-align: center;
     padding-top: 1rem;
 }
-.title-name-characters{
-    -webkit-text-stroke: 0.3px yellow 
+
+.title-name-characters {
+    -webkit-text-stroke: 0.3px yellow;
+    text-align: center;
 }
-.div-people-details, .div-planets-details{
+
+.description-characters, .description-planets{
+    text-align: center;
+}
+
+.div-people-details,
+.div-planets-details {
     margin-top: 6rem;
 }
-.card{
+
+.card {
     background-color: white;
     padding: 1rem;
     border: transparent;
 }
-.div-title-planets{
-    margin-top: 6rem;
 
-}
-.div-card-buttons{
+.div-card-buttons {
     justify-content: space-between;
     display: flex;
 }
-.div-card-buttons-planets{
+
+.div-card-buttons-planets {
     justify-content: space-between;
     display: flex;
     margin-top: 1rem;

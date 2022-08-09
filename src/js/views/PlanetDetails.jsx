@@ -45,7 +45,7 @@ const PlanetDetails = () => {
                     </div>
                     <div className="col-6 div-title-planets">
                         <h1 className="title-name-characters">{character.properties?.name}</h1>
-                        <p>
+                        <p className="description-planets">
                             {character?.description}
                         </p>
                     </div>
@@ -56,7 +56,7 @@ const PlanetDetails = () => {
                         {character.properties?.name}
                     </div>
                     <div className="col-2">
-                    <p><b>Climate</b></p>
+                        <p><b>Climate</b></p>
                         <p>{character.properties?.climate}</p>
                     </div>
                     <div className="col-2">

@@ -15,7 +15,7 @@ import foto from "../../img/starWars.png"
 const CardPlanets = ({ character }) => {
     const { store, actions } = useContext(Context);
     const { population, terrain, name, created } = character.properties;
-    const {uid} = character
+    const { uid } = character
 
     return (
         <>
