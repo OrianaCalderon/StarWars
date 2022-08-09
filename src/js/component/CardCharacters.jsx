@@ -12,11 +12,11 @@ import { Link } from "react-router-dom";
 const CardCharacters = ({ character }) => {
 
     const { store, actions } = useContext(Context);
-    const { gender, hair_color, name, eye_color, created} = character.properties;
+    const { gender, hair_color, name, eye_color, created } = character.properties;
     const { uid } = character;
 
     return (
-        <> 
+        <>
 
             <div className="col-3 mx-3 card" >
                 <img src="https://picsum.photos/seed/picsum/20/20" className="card-img-top " alt="imagen" />
@@ -25,14 +25,23 @@ const CardCharacters = ({ character }) => {
                     <p className="card-text my-0">Gender: {gender}</p>
                     <p className="card-text my-0">Hair color: {hair_color}</p>
                     <p className="card-text">Eye color: {eye_color}</p>
-                    <Link to={`/character/${uid}`} className="btn btn-outline-primary button-learn-more">
-                        Learn more!
-                    </Link>
-                    <button type="button" 
-                    className="btn btn-outline-warning button-heart"
-                    onClick={() =>{actions.addFavoritos(created)}}>
-                        <i className="far fa-heart"></i>
-                    </button>
+                    <div className="div-card-buttons">
+                        <div className="col">
+                            <Link to={`/character/${uid}`} className="btn btn-outline-primary button-learn-more">
+                                Learn more!
+                            </Link>
+                        </div>
+                        <div className="col">
+                            <button type="button"
+                                className="btn btn-outline-warning button-heart"
+                                onClick={() => { actions.addFavoritos(created) }}>
+                                <i className="far fa-heart"></i>
+                            </button>
+                        </div>
+
+
+                    </div>
+
                 </div>
             </div>
 

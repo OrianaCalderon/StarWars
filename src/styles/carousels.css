@@ -19,12 +19,12 @@
 .div-title-planet{
     margin-top: 5rem;
 }
-.button-learn-more{
+/* .button-learn-more{
     float: left;
 }
 .button-heart{
     float: right;
-}
+} */
 .card-text, .card-title{
     text-align: left;
 }
@@ -51,4 +51,13 @@
 .div-title-planets{
     margin-top: 6rem;
 
+}
+.div-card-buttons{
+    justify-content: space-between;
+    display: flex;
+}
+.div-card-buttons-planets{
+    justify-content: space-between;
+    display: flex;
+    margin-top: 1rem;
 }
