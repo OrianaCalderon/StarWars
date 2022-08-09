@@ -41,7 +41,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			addFavoritos: (id) => {
 				let store = getStore();
-				console.log("me ejecuto", id)
 				let exist = store.favorito.find((item) => item._id == id)
 				if (!exist) {
 					for (let endPoint of store.endPoint) {
@@ -64,7 +63,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			deleteFavoritoList: (id) => {
 				const store = getStore()
-				console.log("me ejecuto")
 				let newListFavorito = store.favorito.filter((item, index) => {
 					if (id != index) {
 						return item
