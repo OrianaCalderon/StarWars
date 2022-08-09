@@ -28,10 +28,10 @@ export const Navbar = () => {
 								return(
 									<li key={index}>
 										<div>
-											{item.name}
+											{item.properties.name}
 										</div>
 										<div>
-											<i class="fas fa-trash" key={index} onClick={()=>actions.deleteFavoritoList(index)}></i>
+											<i className="fas fa-trash" key={index} onClick={()=>actions.deleteFavoritoList(index)}></i>
 										</div>
 									</li>
 								)

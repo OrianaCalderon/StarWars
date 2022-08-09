@@ -32,7 +32,7 @@ const CardPlanets = ({ character }) => {
                         <div className="col">
                             <button type="button"
                                 className="btn btn-outline-warning button-heart"
-                                onClick={() => { actions.addFavoritos(created) }}>
+                                onClick={() => { actions.addFavoritos(character._id) }}>
                                 <i className="far fa-heart"></i>
                             </button>
                         </div>

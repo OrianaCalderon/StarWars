@@ -39,37 +39,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				
 			},
-			addFavoritos: (favoritos) => {
+			addFavoritos: (id) => {
 				let store = getStore();
-				console.log("me ejecuto", favoritos)
-				let exist = store.favorito.find((item)=> item.created == favoritos)
+				console.log("me ejecuto", id)
+				let exist = store.favorito.find((item)=> item._id == id)
 				if(!exist){
 					for(let endPoint of store.endPoint){
-						for(let item of store[endPoint]){
-							if(item.created == favoritos){
+						for(let endPoint of store[endPoint]){
+							if(endPoint._id == id){
 								setStore({
 									...store,
-									favorito:[...store.favorito, item]
+									favorito:[...store.favorito, endPoint]
 								})
 							}
 						}
 					}
 				}else{
-					let newFavorite = store.favoritos.filter((item)=> favoritos != item.created)
+					let newFavorite = store.favorito.filter((item)=> item._id != id)
 					setStore({
 						...store,
 						favorito:newFavorite})
 				}
 			},
-			deleteFavoritoList: (favorito)=>{
+			deleteFavoritoList: (id)=>{
 				const store = getStore()
+				console.log("me ejecuto")
 				let newListFavorito = store.favorito.filter((item, index)=>{
-					if(index != favorito){
+					if(id != index){
 						return item
 					}
 				})
 				setStore({...store, 
-					favoriteChars: newListFavorito
+					favorito: newListFavorito
 				})
 			},
 
