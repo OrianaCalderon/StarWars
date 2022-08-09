@@ -2,6 +2,9 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext.js"
 
+//image
+import foto from "../../img/starWars.png"
+
 //style-css
 import "../../styles/carousels.css"
 
@@ -19,7 +22,7 @@ const CardCharacters = ({ character }) => {
         <>
 
             <div className="col-3 mx-3 card" >
-                <img src="https://picsum.photos/seed/picsum/20/20" className="card-img-top " alt="imagen" />
+                <img src={foto} className="card-img-top " alt="imagen" />
                 <div className="card-body">
                     <h5 className="card-title"><p><b>{name}</b></p></h5>
                     <p className="card-text my-0">Gender: {gender}</p>

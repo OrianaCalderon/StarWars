@@ -5,6 +5,9 @@ import PropTypes from 'prop-types'
 import { Context } from "../store/appContext.js";
 import { useParams } from "react-router";
 
+//image
+import foto from "../../img/starWars.png"
+
 //style-css
 import "../../styles/carousels.css";
 
@@ -31,11 +34,11 @@ const PlanetDetails = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container div-planets-details">
                 <div className="row">
                     <div className="col-6">
                         <img
-                            src="https://picsum.photos/seed/picsum/100/100"
+                            src={foto}
                             className="card-img-top p-4"
                             alt="imagen"
                         />

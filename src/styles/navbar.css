@@ -9,3 +9,9 @@
 .div-empty{
   text-align: center;
 }
+.div-name-deleteButton{
+  justify-content: space-between;
+  display: flex;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}

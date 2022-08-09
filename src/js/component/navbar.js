@@ -16,7 +16,7 @@ export const Navbar = () => {
 						alt="StarWars"
 						width="150"
 						height="70"
-					 />
+					/>
 				</Link>
 				<div className="btn-group" role="group">
 					<button id="btnGroupDrop1" type="button" className="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,15 +24,18 @@ export const Navbar = () => {
 					</button>
 					<ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
 						{store.favorito.length > 0 ?
-							(store.favorito.map((item,index)=>{
-								return(
+							(store.favorito.map((item, index) => {
+								return (
 									<li key={index}>
-										<div>
-											{item.properties.name}
+										<div className="div-name-deleteButton">
+											<div>
+												{item.properties.name}
+											</div>
+											<div>
+												<i className="fas fa-trash" key={index} onClick={() => actions.deleteFavoritoList(index)}></i>
+											</div>
 										</div>
-										<div>
-											<i className="fas fa-trash" key={index} onClick={()=>actions.deleteFavoritoList(index)}></i>
-										</div>
+
 									</li>
 								)
 							}))

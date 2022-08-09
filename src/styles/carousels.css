@@ -40,7 +40,7 @@
 .title-name-characters{
     -webkit-text-stroke: 0.3px yellow 
 }
-.div-people-details{
+.div-people-details, .div-planets-details{
     margin-top: 6rem;
 }
 .card{

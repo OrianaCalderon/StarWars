@@ -8,6 +8,9 @@ import { useParams } from "react-router";
 //style-css
 import "../../styles/carousels.css";
 
+//image
+import foto from "../../img/starWars.png"
+
 const CharacterDetails = () => {
     const params = useParams();
 
@@ -34,7 +37,7 @@ const CharacterDetails = () => {
                 <div className="row">
                     <div className="col-6">
                         <img
-                            src="https://picsum.photos/seed/picsum/100/100"
+                            src={foto}
                             className="card-img-top p-4"
                             alt="imagen"
                         />
