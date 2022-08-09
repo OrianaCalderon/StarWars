@@ -5,32 +5,37 @@ import PropTypes from "prop-types";
 import CardCharacters from "../component/CardCharacters.jsx";
 import CardPlanets from "../component/CardPlanets.jsx";
 
-const Carousel = ({ title, items}) => {
+const Carousel = ({ title, items }) => {
     return (
         <>
-
             <div className="div-title-people">
                 <h2>{title}</h2>
             </div>
-            <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+            <div
+                id="carouselExampleSlidesOnly"
+                className="carousel slide"
+                data-bs-ride="carousel"
+            >
                 <div className="row flex-row flex-nowrap carouselWrap">
-    
-                    
-                    {
-                        title === "People" ?
-                        items.map((character) => {
+                    {title === "Characters"
+                        ? items.map((character) => {
                             return (
-                                <CardCharacters key={`character-${character._id}`} character={character} />
-                            )
+                                <CardCharacters
+                                    key={`character-${character._id}`}
+                                    character={character}
+                                />
+                            );
                         })
-                        :
-                        items.map((character)=>{
-                            return(
-                                <CardPlanets key={`character-${character._id}`} character={character} />
-                            )
-                        })
-
-                    }
+                        : title === "Planets"
+                            ? items.map((character) => {
+                                return (
+                                    <CardPlanets
+                                        key={`${title}-${character._id}`}
+                                        character={character}
+                                    />
+                                );
+                            })
+                            : null}
                 </div>
             </div>
 

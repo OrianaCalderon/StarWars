@@ -1,71 +1,81 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext, useState, useEffect } from "react";
+import PropTypes from 'prop-types'
+
+//react-router
+import { Context } from "../store/appContext.js";
+import { useParams } from "react-router";
 
 //style-css
-import "../../styles/carousels.css"
+import "../../styles/carousels.css";
 
 
+const PlanetDetails = () => {
+    const params = useParams();
 
+    const { store, actions } = useContext(Context);
 
-const PlanetDetails = ({ character }) => {
-    // const params = useParams();
-    const { name, climate, population, orbital_period, rotation_period, diameter} = character.properties;
-    // const { uid } = params;
+    const [character, setCharacter] = useState({});
+
+    function getDetail() {
+        const detail = store.planets.find((character) => {
+            return character.uid == params.id;
+        });
+        if (detail != undefined) {
+            setCharacter(detail)
+        }
+    }
+
+    useEffect(() => {
+        getDetail()
+    }, [store.planets]);
 
     return (
         <>
-
-            <div className="container" >
+            <div className="container">
                 <div className="row">
                     <div className="col-6">
-                        <img src="https://picsum.photos/seed/picsum/20/20" className="card-img-top" alt="imagen" />
+                        <img
+                            src="https://picsum.photos/seed/picsum/100/100"
+                            className="card-img-top"
+                            alt="imagen"
+                        />
                     </div>
                     <div className="col-6">
-                        <p>{name}</p>
+                        <h1 className="title-name-characters">{character.properties?.name}</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, molestiae dolor cumque 
-                            similique recusandae provident exercitationem amet? Nisi beatae, odit, recusandae doloribus
-                            nulla fuga soluta exercitationem non possimus consectetur in.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, molestiae dolor cumque 
-                            similique recusandae provident exercitationem amet? Nisi beatae, odit, recusandae doloribus
-                            nulla fuga soluta exercitationem non possimus consectetur in.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, molestiae dolor cumque 
-                            similique recusandae provident exercitationem amet? Nisi beatae, odit, recusandae doloribus
-                            nulla fuga soluta exercitationem non possimus consectetur in.
+                            {character?.description}
                         </p>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row div-column-details">
                     <div className="col-2">
-                        <p>Name</p>
-                        {name}
+                        <p><b>Name</b></p>
+                        {character.properties?.name}
                     </div>
                     <div className="col-2">
-                        <p>Climate</p>
-                        <p>{climate}</p>
+                    <p><b>Climate</b></p>
+                        <p>{character.properties?.climate}</p>
                     </div>
                     <div className="col-2">
-                        <p>Population</p>
-                        {population}
+                        <p><b>Population</b></p>
+                        {character.properties?.population}
                     </div>
                     <div className="col-2">
-                        <p>Orbital Period</p>
-                        {orbital_period}
+                        <p><b>Orbital Period</b></p>
+                        {character.properties?.orbital_period}
                     </div>
                     <div className="col-2">
-                        <p>Rotation Period</p>
-                        {rotation_period}
+                        <p><b>Rotation period</b></p>
+                        {character.properties?.rotation_period}
                     </div>
                     <div className="col-2">
-                        <p>Diameter</p>
-                        {diameter}
+                        <p><b>Diameter</b></p>
+                        {character.properties?.diameter}
                     </div>
                 </div>
             </div>
-
-
         </>
-    )
+    );
 }
 
 PlanetDetails.propTypes = {

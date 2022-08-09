@@ -24,3 +24,15 @@
 .card-text, .card-title{
     text-align: left;
 }
+
+.div-column-details{
+    margin-top: 4rem;
+    color: #5e2129;
+    margin-bottom: 4rem;
+    border-top: 1px solid #5e2129;
+    text-align: center;
+    padding-top: 1rem;
+}
+.title-name-characters{
+    color:red;
+}

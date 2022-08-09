@@ -11,11 +11,12 @@ import { Link } from "react-router-dom";
 
 const CardCharacters = ({ character }) => {
 
-    const { gender, hair_color, name, eye_color} = character.properties;
+    const { store, actions } = useContext(Context);
+    const { gender, hair_color, name, eye_color, created} = character.properties;
     const { uid } = character;
 
     return (
-        <>
+        <> 
 
             <div className="col-3 mx-3 card" >
                 <img src="https://picsum.photos/seed/picsum/20/20" className="card-img-top" alt="imagen" />
@@ -27,9 +28,11 @@ const CardCharacters = ({ character }) => {
                     <Link to={`/character/${uid}`} className="btn btn-outline-primary button-learn-more">
                         Learn more!
                     </Link>
-                    <Link to={`/`} className="btn btn-outline-warning button-heart">
+                    <button type="button" 
+                    className="btn btn-outline-warning button-heart"
+                    onClick={() =>{actions.addFavoritos(created)}}>
                         <i className="far fa-heart"></i>
-                    </Link>
+                    </button>
                 </div>
             </div>
 
